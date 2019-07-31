@@ -44,11 +44,12 @@ do
 	result="test_${test_id}"
 	echo "================== ${result} begins, i/o type ${io_t}; batchsize ${batch}; i/o size ${io_s};  ===================" | tee -a ~/${result}.txt
 	fio -direct=1 -iodepth 1 -thread  -ioengine=psync -rw=${io_t} -bs=${batch} -io_size=${io_s} -size=512M -numjobs=10 -runtime=60 -group_reporting  -fallocate=none -name=${result} -directory=/mnt/orangefs | tee -a ~/${result}.txt
+	rm /mnt/orangefs/${result}.*
 done
 # empty_env
 # the following line is to delete the files generated for FIO test, which are too space consuming
 # for speeding up, you can comment the following line of code optionally
-rm ~/${tsnm}.*
+
 #
 #
 # unalias
