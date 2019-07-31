@@ -42,7 +42,7 @@ do
 	io_t=${IO_type_array[${test_id}]}
 	io_s=${IO_size_array[${test_id}]}
 	result="test_${test_id}"
-	echo "================== ${result} begins, i/o type ${batch}; batchsize ${batch}; i/o size ${io_s};  ===================" | tee -a ~/${result}.txt
+	echo "================== ${result} begins, i/o type ${io_t}; batchsize ${batch}; i/o size ${io_s};  ===================" | tee -a ~/${result}.txt
 	fio -direct=1 -iodepth 1 -thread  -ioengine=psync -rw=${io_t} -bs=${batch} -io_size=${io_s} -size=512M -numjobs=10 -runtime=60 -group_reporting  -fallocate=none -name=${result} -directory=/mnt/orangefs | tee -a ~/${result}.txt
 done
 # empty_env
