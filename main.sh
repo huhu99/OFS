@@ -18,23 +18,23 @@ tsnm="test_1"
 batch='16k'
 io_t='readwrite'
 io_s='10G'
-IO_type_array = ("readwrite", "readwrite", "readwrite", "readwrite", 
-				"readwrite", "readwrite", "readwrite", "readwrite", 
-				"readwrite", "readwrite", "readwrite", "readwrite", 
-				"readwrite", "readwrite", "readwrite", "readwrite", 
-				"read", "write", "randread", "randwrite",
+IO_type_array = ("readwrite", "readwrite", "readwrite", "readwrite", \
+				"readwrite", "readwrite", "readwrite", "readwrite", \
+				"readwrite", "readwrite", "readwrite", "readwrite", \
+				"readwrite", "readwrite", "readwrite", "readwrite", \
+				"read", "write", "randread", "randwrite", \
 				"readwrite", "randrw")
-Block_size_array = ("16K", "16K", "16K", "16K", 
-					"16K", "16K", "16K", "16K", 
-					"1K", "2K", "4K", "8K", 
-					"16K", "32K", "64K", "128K", 
-					"16K", "16K", "16K", "16K", 
+Block_size_array = ("16K", "16K", "16K", "16K", \
+					"16K", "16K", "16K", "16K", \
+					"1K", "2K", "4K", "8K", \
+					"16K", "32K", "64K", "128K", \
+					"16K", "16K", "16K", "16K", \
 					"16K", "16K")
-IO_size_array = ("128M", "512M", "1G", "2G", 
-				"3G", "4G", "5G", "10G", 
-				"1G", "1G", "1G", "1G", 
-				"1G", "1G", "1G", "1G", 
-				"1G", "1G", "1G", "1G", 
+IO_size_array = ("128M", "512M", "1G", "2G", \
+				"3G", "4G", "5G", "10G", \
+				"1G", "1G", "1G", "1G", \
+				"1G", "1G", "1G", "1G", \
+				"1G", "1G", "1G", "1G", \
 				"1G", "1G")
 for test_id in {1..22}
 do
