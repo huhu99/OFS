@@ -1,3 +1,6 @@
+Thanks to Garfield-Finch: https://github.com/Garfield-Finch/OrangeFS
+I made a little modification to main.sh. Simply run sh main.sh to start 22 tests. Note that /mnt/orangefs must exist.
+
 # OrangeFS
 ## Two Scripts
 ### `sh once.sh`
